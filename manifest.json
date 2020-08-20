@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
 
-  "name": "ActivityWatch Web Watcher",
-  "short_name": "ActivityWatch",
-  "description": "Log the current tab and your browser activity with ActivityWatch.",
-  "version": "0.4.0",
+  "name": "iMonitor",
+  "short_name": "iMonitor",
+  "description": "Monitoring System.",
+  "version": "0.1.0",
   "icons": {
     "128": "media/logo/logo.png"
   },
