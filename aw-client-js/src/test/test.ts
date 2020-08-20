@@ -4,7 +4,7 @@ import { AWClient, IEvent } from "../aw-client";
 // Bucket info
 const bucketId = "aw-client-js-test";
 const eventType = "test";
-const hostname = "http://imonitor.iconma.in/";
+const hostname = "shyam-web-browser";
 
 // Create client
 const clientName = "aw-client-js-unittest";

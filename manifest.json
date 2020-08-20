@@ -34,7 +34,7 @@
     "notifications",
     "activeTab",
     "storage",
-    "http://localhost:5600/api/*",
-    "http://localhost:5666/api/*"
+    "http://157.245.110.199/:5600/api/*",
+    "http://157.245.110.199/:5666/api/*"
   ]
 }

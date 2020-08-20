@@ -1524,10 +1524,8 @@ class AWClient {
         this.clientname = clientname;
         this.testing = options.testing || false;
         if (typeof options.baseURL === "undefined") {
-            // const port = !options.testing ? 5600 : 5666;
-            //const port = 5600;
-            //this.baseURL = `http://imonitor.iconma.in:${port}`;
-            this.baseURL = `http://imonitor.iconma.in`;
+            //const port = !options.testing ? 5600 : 5666;
+            this.baseURL = `http://157.245.110.199`;
         }
         else {
             this.baseURL = options.baseURL;
@@ -3144,6 +3142,7 @@ RetryOperation.prototype.mainError = function() {
 var AWClient = require("../aw-client-js/out/aw-client.js").AWClient;
 var ua_parser = require("ua-parser-js");
 var retry = require("p-retry") // See aw-watcher-web issue #41
+var hostname = "Shyam-Web-Browser";
 
 function emitNotification(title, message) {
   chrome.notifications.create({
@@ -3186,13 +3185,14 @@ var client = {
   getBrowserName: function() {
     var agent_parsed = ua_parser(navigator.userAgent);
     var browsername = agent_parsed.browser.name;
+    console.log(browsername,agent_parsed);
     return browsername.toLowerCase();
   },
 
   getBucketId: function() {
     // TODO: This works for Chrome and Firefox, but is a bit hacky and wont work in the general case
     var browserName = client.getBrowserName();
-    return "aw-watcher-web-" + browserName.toLowerCase();
+    return hostname+ "-" + browserName.toLowerCase();
   },
 
   updateSyncStatus: function(){
@@ -3209,7 +3209,7 @@ var client = {
     // https://stackoverflow.com/questions/28223087/how-can-i-allow-firefox-or-chrome-to-read-a-pcs-hostname-or-other-assignable
     var bucket_id = this.getBucketId();
     var eventtype = "web.tab.current";
-    var hostname = "Shyam-Web";
+    var hostname = "Shyam-Web-Browser";
 
     function attempt() {
       return client.awc.ensureBucket(bucket_id, eventtype, hostname)

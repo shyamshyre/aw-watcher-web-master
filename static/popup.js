@@ -15,8 +15,8 @@ function renderStatus() {
     // Testing
     if (obj.testing == true) {
       let element = document.getElementById('testing-notice');
-      element.innerHTML = "Extension is running in testing mode";
-      element.style = "color: #F60; font-size: 1.2em;";
+      element.innerHTML = "Application Monioring System- Captures only overview but not internal information.";
+      element.style = "color: #F60; font-size: 0.8em;";
     }
 
     // Last sync

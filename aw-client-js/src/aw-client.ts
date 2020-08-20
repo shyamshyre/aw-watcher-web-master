@@ -58,10 +58,8 @@ export class AWClient {
         this.clientname = clientname;
         this.testing = options.testing || false;
         if (typeof options.baseURL === "undefined") {
-            // const port = !options.testing ? 5600 : 5666;
-            //const port = 5600;
-            //this.baseURL = `http://imonitor.iconma.in:${port}`;
-            this.baseURL = `http://imonitor.iconma.in`;
+            //const port = !options.testing ? 5600 : 5666;
+            this.baseURL = `http://157.245.110.199`;
         } else {
           this.baseURL = options.baseURL;
         }

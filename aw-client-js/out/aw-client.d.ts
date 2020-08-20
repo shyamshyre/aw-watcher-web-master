@@ -52,7 +52,7 @@ export declare class AWClient {
     getEvents(bucketId: string, params: {
         [k: string]: any;
     }): Promise<IEvent[]>;
-    countEvents(bucketId: string, startTime?: Date, endTime?: Date): Promise<import("../../../../../../../Users/shyam/Documents/activity-watch/aw-watcher-web-master/aw-client-js/node_modules/axios").AxiosResponse<any>>;
+    countEvents(bucketId: string, startTime?: Date, endTime?: Date): Promise<import("../../../../../../../Users/shyam/Documents/activity-watch/aw-watch-web.bkup/aw-client-js/node_modules/axios").AxiosResponse<any>>;
     insertEvent(bucketId: string, event: IEvent): Promise<IEvent>;
     insertEvents(bucketId: string, events: IEvent[]): Promise<IEvent[]>;
     replaceEvent(bucketId: string, event: IEvent): Promise<IEvent>;
